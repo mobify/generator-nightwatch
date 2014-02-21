@@ -20,8 +20,10 @@ describe('nightwatch generator', function () {
   it('creates expected files', function (done) {
     var expected = [
       // add files you expect to exist here.
-      '.jshintrc',
-      '.editorconfig'
+      '_header.js',
+      '_footer.js',
+      '_package.json',
+      '_settings.json'
     ];
 
     helpers.mockPrompt(this.app, {
