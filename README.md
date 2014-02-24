@@ -1,5 +1,7 @@
 # generator-nightwatch
 
+Install yeoman locally:
+
 ```
 $ npm install -g yo
 ```
