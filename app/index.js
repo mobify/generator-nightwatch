@@ -17,24 +17,9 @@ var NightwatchGenerator = yeoman.generators.Base.extend({
   },
 
   askFor: function () {
-    var done = this.async();
-
     console.log(this.yeoman);
 
     console.log(chalk.magenta('Generating Nightwatch integration test infrastructure.'));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
   },
 
   app: function () {
