@@ -1,6 +1,6 @@
 
 module.exports = {
-  'Header test': function(client) {
+  'Header test': function(browser) {
 
   }
 }

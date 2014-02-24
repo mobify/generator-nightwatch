@@ -2,6 +2,7 @@
   "name": "Nightwatch",
   "version": "0.0.1",
   "dependencies": {
+    "grunt": "~0.4.1",
     "nightwatch": "git+https://github.com/mobify/nightwatch.git#mobify",
     "nightwatch-commands": "git+https://a1f92e41a282773dfd449d413f368e967380c1ad:x-oauth-basic@github.com/mobify/nightwatch-commands.git"
   }

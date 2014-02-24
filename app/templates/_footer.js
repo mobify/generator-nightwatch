@@ -1,6 +1,6 @@
 
 module.exports = {
-  'Footer test': function(client) {
+  'Footer test': function(browser) {
 
   }
 }
