@@ -1,5 +1,5 @@
 module.exports = {
-  'Checkout test': function(client) {
+  'Checkout test': function(browser) {
     browser.end();
   }
 }
