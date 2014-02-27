@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     child = grunt.util.spawn({
         cmd: 'node',
-        args: ['node_modules/nightwatch/bin/runner.js'],
+        args: ['node_modules/nightwatch/bin/runner.js','-c','tests/integration/nightwatch.json'],
         opts: {stdio: 'inherit'}
       },
       function() {

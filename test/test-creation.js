@@ -6,22 +6,22 @@ var helpers = require('yeoman-generator').test;
 describe('nightwatch generator', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
-      if (err) {
-        return done(err);
-      }
+        if (err) {
+            return done(err);
+        }
 
-      this.app = helpers.createGenerator('nightwatch:app', [
-        '../../app'
-      ]);
-      done();
+        this.app = helpers.createGenerator('nightwatch:app', [
+            '../../app'
+        ]);
+        done();
     }.bind(this));
   });
 
   it('creates expected files', function (done) {
     var expected = [
-      // add files you expect to exist here.
-      'package.json',
-      'settings.json'
+        // add files you expect to exist here.
+        'package.json',
+        'Gruntfile.js'
     ];
 
     helpers.mockPrompt(this.app, {
@@ -29,17 +29,19 @@ describe('nightwatch generator', function () {
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
-      helpers.assertFile(expected);
-      done();
+        helpers.assertFile(expected);
+        done();
     });
   });
 
   it('creates the nightwatch files', function(done) {
     var expected = [
-        'tests/components/header.js',
-        'tests/components/footer.js',
-        'tests/pages/index.js',
-        'tests/workflows/checkout.js'
+        'tests/integration/nightwatch.json',
+        'tests/integration/site.json',
+        'tests/integration/components/header.js',
+        'tests/integration/components/footer.js',
+        'tests/integration/pages/index.js',
+        'tests/integration/workflows/checkout.js'
     ];
 
     helpers.mockPrompt(this.app, {

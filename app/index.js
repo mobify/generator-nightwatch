@@ -24,18 +24,12 @@ var NightwatchGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('tests');
-    this.mkdir('tests/components');
 
-    this.copy('_package.json', 'package.json');
-    this.copy('_Gruntfile.js', 'GruntFile.js');
+    this.copy('package.json', 'package.json');
+    this.copy('Gruntfile.js', 'GruntFile.js');
 
-    this.copy('nightwatch/_settings.json', 'settings.json');
-    this.copy('nightwatch/_site.json', 'site.json');
-
-    this.copy('nightwatch/components/_header.js', 'tests/components/header.js');
-    this.copy('nightwatch/components/_footer.js', 'tests/components/footer.js');
-    this.copy('nightwatch/pages/_index.js', 'tests/pages/index.js');
-    this.copy('nightwatch/workflows/_checkout.js', 'tests/workflows/checkout.js');
+    this.directory('nightwatch', 'tests/integration');
+    this.template('_site.json', 'tests/integration/site.json');
   },
 
   projectfiles: function () {
