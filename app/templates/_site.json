@@ -1,5 +1,5 @@
 
 {
-  "bundleUrl": "http://localhost:8080",
-  "siteUrl": ""
+  "bundleUrl": "<%= bundleUrl %>",
+  "siteUrl": "<%= siteUrl %>"
 }
