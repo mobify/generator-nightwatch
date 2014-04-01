@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "grunt": "~0.4.1",
-    "nightwatch": "git+https://github.com/mobify/nightwatch.git#mobify",
+    "nightwatch": "git+https://github.com/beatfactor/nightwatch.git",
     "nightwatch-commands": "git+https://github.com/mobify/nightwatch-commands.git"
   }
 }
