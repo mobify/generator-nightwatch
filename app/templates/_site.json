@@ -1,5 +1,9 @@
-
 {
-  "bundleUrl": "<%= bundleUrl %>",
-  "siteUrl": "<%= siteUrl %>"
+  "activeProfile": "default",
+  "profiles": {
+    "default": {
+      "bundleUrl": "<%= bundleUrl %>",
+      "siteUrl": "<%= siteUrl %>"
+    }
+  }
 }
