@@ -4,6 +4,6 @@
   "dependencies": {
     "grunt": "~0.4.1",
     "nightwatch": "0.4.14",
-    "nightwatch-commands": "0.0.1"
+    "nightwatch-commands": "latest"
   }
 }
