@@ -1,0 +1,20 @@
+general:
+  build_dir: tests
+
+dependencies:
+    override:
+        - gem install sass compass
+        - npm install mobify-client
+        - npm install
+    post:
+        - wget https://selenium.googlecode.com/files/selenium-server-standalone-2.39.0.jar
+        - java -jar selenium-server-standalone-2.39.0.jar:
+            background: true
+
+test:
+    pre:
+        - mobify preview:
+            background: true
+        - sleep 5
+    override:
+        - grunt nightwatch
