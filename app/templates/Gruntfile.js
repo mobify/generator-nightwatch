@@ -1,4 +1,3 @@
-
 module.exports = function(grunt) {
     var child;
 
@@ -14,7 +13,10 @@ module.exports = function(grunt) {
             args: [].concat(['node_modules/nightwatch/bin/runner.js', '-c', 'tests/integration/nightwatch.json'], grunt.option.flags()),
             opts: {stdio: 'inherit'}
         },
-        function() {
+        function(error, result, code) {
+            if (code !== 0) {
+                grunt.fail.fatal('Tests failed', code);
+            }
             callback();
         });
     });
