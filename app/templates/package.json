@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "grunt": "~0.4.1",
-    "nightwatch": "latest",
+    "nightwatch": "0.4.15",
     "nightwatch-commands": "latest"
   }
 }
