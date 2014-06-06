@@ -1,5 +1,6 @@
 dependencies:
     override:
+        - rm -rf node_modules/
         - gem install sass compass
         - npm install -g mobify-client
         - npm install
