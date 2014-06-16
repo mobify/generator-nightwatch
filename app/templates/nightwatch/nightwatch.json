@@ -5,11 +5,14 @@
     "custom_assertions_path": "./node_modules/nightwatch-commands/assertions",
 
     "selenium": {
-        "start_process": false,
-        "server_path": "",
+        "start_process": true,
+        "server_path": "./node_modules/nightwatch-commands/selenium/selenium-server.jar",
         "log_path": "",
         "host": "127.0.0.1",
-        "port": 4444
+        "port": 4444,
+        "cli_args": {
+            "webdriver.chrome.driver": "./node_modules/nightwatch-commands/selenium/drivers/chromedriver"
+        }
     },
 
     "test_settings": {
@@ -35,7 +38,8 @@
                     "args": [
                         "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A4449d Safari/9537.53",
                         "--window-size=320,640",
-                        "--allow-running-insecure-content"
+                        "--allow-running-insecure-content",
+                        "--test-type"
                     ]
                 },
                 "javascriptEnabled": true,
