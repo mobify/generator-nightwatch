@@ -27,7 +27,6 @@
             "silent": true,
             "output": true,
             "firefox_profile": false,
-            "chrome_driver": "lib/chromedriver",
             "screenshots": {
                 "enabled": false,
                 "path": ""
