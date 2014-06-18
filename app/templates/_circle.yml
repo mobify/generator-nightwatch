@@ -1,12 +1,13 @@
+general:
+  build_dir: tests
+
 dependencies:
     override:
         - gem install sass compass
         - npm install -g mobify-client
         - npm install
     post:
-        - wget https://selenium.googlecode.com/files/selenium-server-standalone-2.39.0.jar
-        - java -jar selenium-server-standalone-2.39.0.jar:
-            background: true
+        - chmod 755 ../node_modules/nightwatch-commands/selenium/drivers/chromedriver
 
 test:
     override:
