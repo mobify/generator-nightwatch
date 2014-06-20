@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
         grunt.util.spawn({
             cmd: 'node',
-            args: [].concat(['node_modules/nightwatch/bin/runner.js', '-c', 'tests/integration/nightwatch.json'], grunt.option.flags()),
+            args: [].concat(['node_modules/nightwatch/bin/runner.js', '-c', 'tests/system/nightwatch.json'], grunt.option.flags()),
             opts: {stdio: 'inherit'}
         },
         function(error, result, code) {

@@ -36,12 +36,12 @@ describe('nightwatch generator', function () {
 
   it('creates the nightwatch files', function(done) {
     var expected = [
-        'tests/integration/nightwatch.json',
-        'tests/integration/site.json',
-        'tests/integration/components/header.js',
-        'tests/integration/components/footer.js',
-        'tests/integration/pages/index.js',
-        'tests/integration/workflows/checkout.js'
+        'tests/system/nightwatch.json',
+        'tests/system/site.json',
+        'tests/system/components/header.js',
+        'tests/system/components/footer.js',
+        'tests/system/pages/index.js',
+        'tests/system/workflows/checkout.js'
     ];
 
     helpers.mockPrompt(this.app, {
