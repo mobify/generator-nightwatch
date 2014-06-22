@@ -65,8 +65,8 @@ NightwatchGenerator.prototype.app = function app() {
     this.copy('Gruntfile.js', 'GruntFile.js');
     this.copy('_circle.yml', 'circle.yml');
 
-    this.directory('nightwatch', 'tests/integration');
-    this.template('_site.json', 'tests/integration/site.json');
+    this.directory('nightwatch', 'tests/system');
+    this.template('_site.json', 'tests/system/site.json');
 };
 
 module.exports = NightwatchGenerator;
