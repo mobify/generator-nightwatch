@@ -1,0 +1,5 @@
+{
+    "components": ["header", "footer"],
+    "pages": ["home"],
+    "workflows": ["checkout"]
+}
