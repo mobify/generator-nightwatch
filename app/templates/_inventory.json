@@ -1,5 +1,12 @@
 {
-    "components": ["header", "footer"],
-    "pages": ["home"],
-    "workflows": ["checkout"]
+    "components": [
+        "header",
+        "footer"
+    ],
+    "pages": [
+        "home"
+    ],
+    "workflows": [
+        "checkout"
+    ]
 }
