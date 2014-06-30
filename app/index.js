@@ -37,6 +37,9 @@ NightwatchGenerator.prototype.askFor = function askFor() {
                 if (!answer.length) {
                     return 'You must enter a URL.';
                 }
+                if (answer.substring(0,4) !== 'http') {
+                    return 'You must begin your URL with "http".';
+                }
                 return true;
             }
         },{
