@@ -1,14 +1,20 @@
 dependencies:
     override:
-        - gem install sass compass
-        - npm install -g mobify-client
-        - npm install
+        - gem install sass compass:
+            timeout: 600
+        - npm install -g mobify-client:
+            timeout: 600
+        - npm install:
+            timeout: 600
     post:
-        - chmod 755 ./node_modules/nightwatch-commands/selenium/drivers/chromedriver
+        - chmod 755 ./node_modules/nightwatch-commands/selenium/drivers/chromedriver:
+            timeout: 600
 
 test:
     override:
         - compass compile && mobify preview:
             background: true
+            timeout: 600
         - sleep 5
-        - grunt nightwatch
+        - grunt nightwatch:
+            timeout: 600
