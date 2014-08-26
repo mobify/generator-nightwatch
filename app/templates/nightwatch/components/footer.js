@@ -6,7 +6,7 @@ var footer;
 
 module.exports = {
     'setUp': function(browser) {
-        browser.preview()
+        browser.preview();
 
         footer = new Footer(browser);
     },
@@ -20,4 +20,4 @@ module.exports = {
         )
             .end();
     }
-}
+};

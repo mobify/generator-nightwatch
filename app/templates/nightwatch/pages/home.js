@@ -6,7 +6,7 @@ var home;
 
 module.exports = {
     'setUp': function(browser) {
-        browser.preview()
+        browser.preview();
 
         home = new Home(browser);
     },
@@ -20,4 +20,4 @@ module.exports = {
         )
             .end();
     }
-}
+};

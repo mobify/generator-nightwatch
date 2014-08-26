@@ -6,7 +6,7 @@ var header;
 
 module.exports = {
     'setUp': function(browser) {
-        browser.preview()
+        browser.preview();
 
         header = new Header(browser);
     },
@@ -20,4 +20,4 @@ module.exports = {
         )
             .end();
     }
-}
+};
