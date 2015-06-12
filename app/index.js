@@ -38,7 +38,7 @@ NightwatchGenerator.prototype.askFor = function askFor() {
                     return 'You must enter a URL.';
                 }
                 if (answer.substring(0,4) !== 'http') {
-                    return 'You must begin your project URL with "http".';
+                    return 'You must begin your project URL with "http" or "https".';
                 }
                 return true;
             }
@@ -49,12 +49,12 @@ NightwatchGenerator.prototype.askFor = function askFor() {
             default: 'http://localhost:8080',
             validate: function (answer) {
                 if (answer.substring(0,4) !== 'http') {
-                    return 'You must begin your bundle URL with "http".';
+                    return 'You must begin your bundle URL with "http" or "https".';
                 }
                 return true;
             }
         },
-    ]
+    ];
 
     this.prompt(prompts, function (props) {
         this.siteUrl = props.siteUrl;
