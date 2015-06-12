@@ -37,15 +37,24 @@ NightwatchGenerator.prototype.askFor = function askFor() {
                 if (!answer.length) {
                     return 'You must enter a URL.';
                 }
+                if (answer.substring(0,4) !== 'http') {
+                    return 'You must begin your project URL with "http" or "https".';
+                }
                 return true;
             }
         },{
             type: 'input',
             name: 'bundleUrl',
             message: 'What is the URL of your Mobify bundle?',
-            default: 'http://localhost:8080'
+            default: 'http://localhost:8080',
+            validate: function (answer) {
+                if (answer.substring(0,4) !== 'http') {
+                    return 'You must begin your bundle URL with "http" or "https".';
+                }
+                return true;
+            }
         },
-    ]
+    ];
 
     this.prompt(prompts, function (props) {
         this.siteUrl = props.siteUrl;
