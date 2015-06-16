@@ -42,7 +42,8 @@
                 },
                 "javascriptEnabled": true,
                 "acceptSslCerts": true
-            }
+            },
+            "exclude": ["system/pageObjects"]
         }
     }
 }

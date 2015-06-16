@@ -1,18 +1,19 @@
 var selectors = require('../../../tests/system/pageObjects/selectors');
 
-var Checkout = require('../../../tests/system/pageObjects/checkout');
+var Home = require('../../../tests/system/pageObjects/home');
 
-var checkout;
+var home;
 
 module.exports = {
     'setUp': function(browser) {
         browser.preview();
 
-        checkout = new Checkout(browser);
+        home = new Home(browser);
     },
 
-    'Checkout test': function(browser) {
-        // Workflows such as a shopping cart checkout go here
+    'Home - Verify Elements Present': function(browser) {
+        // Page level tests go here, product index, PDP, etc
+        // Change to the selector for your header
         browser
             .verify.elementsPresent(
             selectors.body
